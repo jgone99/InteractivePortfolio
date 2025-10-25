@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Awesome Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <canvas id="canvas"></canvas>
+        <div class="stars-wrapper">
+            <div class="stars"></div>
+        </div>
+        <div class="planet-wrapper p1" onclick=onPlanetClick(this)>
+            <img class="planet" src="res/Planets/Cropped/23.png">
+        </div>
+        <div class="planet-wrapper p2" onclick=onPlanetClick(this)>
+            <img class="planet" src="res/Planets/Cropped/1.png">
+        </div>
+        <div class="planet-wrapper p3" onclick=onPlanetClick(this)>
+            <img class="planet" src="res/Planets/Cropped/8.png">
+        </div>
+        <div class="planet-wrapper p4" onclick=onPlanetClick(this)>
+            <img class="planet" src="res/Planets/Cropped/110.png">
+        </div>
+        <div class="planet-wrapper p5" onclick=onPlanetClick(this)>
+            <img class="planet" src="res/Planets/Cropped/24.png">
+        </div>
+        <div class="custom-cursor-2">
+            <div class="css-cursor-2"></div>
+            <div class="underline"></div>
+        </div>
+
+    </div>
+    <svg width="0" height="0">
+        <defs>
+            <mask id="droplet-mask" x="0" y="0" width="32" height="32" maskUnits="userSpaceOnUse">
+                <!-- Outer droplet shape (white = visible) -->
+                <path d="M 16 29 C 7 29 0 20 16 0 C 32 20 25 29 16 29 Z" fill="white" />
+                <!-- Inner circle cutout (black = transparent) -->
+                <circle cx="16" cy="18" r="4" fill="black" />
+            </mask>
+        </defs>
+    </svg>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
